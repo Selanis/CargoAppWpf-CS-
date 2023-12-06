@@ -1,0 +1,23 @@
+﻿<Window x:Class="CargoAppWpf.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CargoAppWpf"
+        mc:Ignorable="d"
+        Title="Главная страница" Height="832" Width="1280">
+    <Grid>
+        <Label x:Name="mainText" Content="ДОБРО ПОЖАЛОВАТЬ, БАЙСАНГУР" HorizontalAlignment="Left" FontFamily="Inter Medium" Margin="96,67,0,0" VerticalAlignment="Top" Width="1017" FontSize="40" Foreground="White" Panel.ZIndex="10"/>
+        <Button HorizontalAlignment="Left" Margin="1131,67,0,0" VerticalAlignment="Top" Height="54" Width="54" BorderThickness="0"  Background="transparent" Panel.ZIndex="10">
+            <Image Height="49" Source="C:\Users\kpole\Desktop\RTU MIREA\3 семестр\Программная вёрстка в дизайне\Грузовые перевозки\CargoAppWpf\CargoAppWpf\imageslogo-button.png" Stretch="Fill" Width="49"/>
+        </Button>
+        <Button Content="Маршруты" HorizontalAlignment="Left" Margin="226,273,0,0" VerticalAlignment="Top" Height="128" Width="390" Background="#99282E44" FontFamily="Inter Medium" OpacityMask="White" Foreground="White" FontSize="32" BorderBrush="{x:Null}" Panel.ZIndex="10" />
+        <Button Content="Водители" HorizontalAlignment="Left" Margin="226,442,0,0" VerticalAlignment="Top" Height="128" Width="390" Background="#99282E44" FontFamily="Inter Medium" OpacityMask="White" Foreground="White" FontSize="32" BorderBrush="{x:Null}" Panel.ZIndex="10" />
+        <Button Content="Проделанная работа" HorizontalAlignment="Left" Margin="664,273,0,0" VerticalAlignment="Top" Height="128" Width="390" Background="#99282E44" FontFamily="Inter Medium" OpacityMask="White" Foreground="White" FontSize="32" BorderBrush="{x:Null}"  Panel.ZIndex="10" />
+        <Button Content="Пользователи" HorizontalAlignment="Left" Margin="664,442,0,0" VerticalAlignment="Top" Height="128" Width="390" Background="#99282E44" FontFamily="Inter Medium" OpacityMask="White" Foreground="White" FontSize="32" BorderBrush="{x:Null}" Panel.ZIndex="10" />
+        <Image HorizontalAlignment="Center" Height="832" VerticalAlignment="Center" Width="1280" Source="C:\Users\kpole\Desktop\RTU MIREA\3 семестр\Программная вёрстка в дизайне\Грузовые перевозки\CargoAppWpf\CargoAppWpf\images\main-bg.png" Panel.ZIndex="1" OpacityMask="White"/>
+        <Label Content="Выберите таблицу для просмотра" HorizontalAlignment="Left" Margin="226,213,0,0" VerticalAlignment="Top" Height="48" Width="559" Panel.ZIndex="10" Foreground="White" FontSize="32" FontFamily="Inter"/>
+
+
+    </Grid>
+</Window>

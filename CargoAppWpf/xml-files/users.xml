@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Users>
+	<User>
+		<Id>000001</Id>
+		<Name>Решитов</Name>
+		<FirstName>Байсангур</FirstName>
+		<LastName>Дикаевич</LastName>
+		<Login>reshala</Login>
+		<Password>admin</Password>
+		<Work>Начальник автоколонны</Work>
+		<Mail>reshalaBaisan@gmail.com</Mail>
+		<Telephone>8(800)555-35-35</Telephone>
+		<Date>18/11/2023</Date>
+	</User>
+
+	<User>
+		<Id>000001</Id>
+		<Name>Решитов</Name>
+		<FirstName>Байсангур</FirstName>
+		<LastName>Дикаевич</LastName>
+		<Login>Логин</Login>
+		<Password>Пароль</Password>
+		<Work>Начальник автоколонны</Work>
+		<Mail>reshalaBaisan@gmail.com</Mail>
+		<Telephone>8(800)555-35-35</Telephone>
+		<Date>18/11/2023</Date>
+	</User>
+</Users>
