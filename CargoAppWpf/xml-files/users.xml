@@ -1,28 +1,42 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Users>
-	<User>
-		<Id>000001</Id>
-		<Name>Решитов</Name>
-		<FirstName>Байсангур</FirstName>
-		<LastName>Дикаевич</LastName>
-		<Login>reshala</Login>
-		<Password>admin</Password>
-		<Work>Начальник автоколонны</Work>
-		<Mail>reshalaBaisan@gmail.com</Mail>
-		<Telephone>8(800)555-35-35</Telephone>
-		<Date>18/11/2023</Date>
-	</User>
-
-	<User>
-		<Id>000001</Id>
-		<Name>Решитов</Name>
-		<FirstName>Байсангур</FirstName>
-		<LastName>Дикаевич</LastName>
-		<Login>Логин</Login>
-		<Password>Пароль</Password>
-		<Work>Начальник автоколонны</Work>
-		<Mail>reshalaBaisan@gmail.com</Mail>
-		<Telephone>8(800)555-35-35</Telephone>
-		<Date>18/11/2023</Date>
-	</User>
+  <User>
+    <Id>1</Id>
+    <Name>Решитов</Name>
+    <FirstName>Байсангур</FirstName>
+    <LastName>Дикаевич</LastName>
+    <Gender>Мужской</Gender>
+    <Login>reshala</Login>
+    <Password>admin</Password>
+    <Work>Начальник автоколонны</Work>
+    <Mail>reshalaBaisan@gmail.com</Mail>
+    <Telephone>8(800)555-35-35</Telephone>
+    <Date>20.07.2023</Date>
+  </User>
+  <User>
+    <Id>2</Id>
+    <Name>—</Name>
+    <FirstName>Екатерина</FirstName>
+    <LastName>—</LastName>
+    <Gender>Женский</Gender>
+    <Login>kate</Login>
+    <Password>1</Password>
+    <Work>—</Work>
+    <Mail>—</Mail>
+    <Telephone>—</Telephone>
+    <Date>06.12.2023</Date>
+  </User>
+  <User>
+    <Id>3</Id>
+    <Name>—</Name>
+    <FirstName>Владимир</FirstName>
+    <LastName>—</LastName>
+    <Gender>Мужской</Gender>
+    <Login>vova</Login>
+    <Password>123</Password>
+    <Work>—</Work>
+    <Mail>—</Mail>
+    <Telephone>—</Telephone>
+    <Date>06.12.2023</Date>
+  </User>
 </Users>

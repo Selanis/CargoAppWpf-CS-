@@ -24,7 +24,7 @@ namespace CargoAppWpf
 
         public Window1(IEnumerable<XElement> userLogIn) /// Получаю userLogIn с авторизации
         {
-
+            InitializeComponent();
         }
     }
 }
