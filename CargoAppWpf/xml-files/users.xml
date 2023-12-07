@@ -39,4 +39,17 @@
     <Telephone>—</Telephone>
     <Date>06.12.2023</Date>
   </User>
+  <User>
+    <Id>4</Id>
+    <Name>—</Name>
+    <FirstName>Гендальф</FirstName>
+    <LastName>—</LastName>
+    <Gender>Другое</Gender>
+    <Login>gendalf</Login>
+    <Password>123465</Password>
+    <Work>—</Work>
+    <Mail>—</Mail>
+    <Telephone>—</Telephone>
+    <Date>06.12.2023</Date>
+  </User>
 </Users>

@@ -44,7 +44,8 @@ namespace CargoAppWpf
             var secondPassword = SecondPassword.Text;
             var age = Age.Text;
 
-            var radioMale = RadioMale.IsChecked;
+            /// В состоянии isChecked может храниться true, false или null, поэтому у него тип bool?.
+            var radioMale = RadioMale.IsChecked; /// Получаем, отмечена ли наша кнопочка. В нашем случае только одна кнопочка может быть выбрана.
             var radioFemale = RadioFemale.IsChecked;
             var radioOther = RadioOther.IsChecked;
 
@@ -103,9 +104,10 @@ namespace CargoAppWpf
                         new XElement("Mail", "—"),
                         new XElement("Telephone", "—"),
                         new XElement("Date", DateTime.Today.ToString().Substring(0, 10))
+                    /// В поле дата настраиваю так, чтобы фиксировалась дата регистрации. Перевожу её в строку, а дальше методом Substring фиксирую срез
                     );
 
-                    /// Добавляю в дерево и сохраняю
+                    /// Добавляю узел в дерево и сохраняю
                     users.Add(userTreeXML);
                     users.Save("../../../xml-files/users.xml");
 
