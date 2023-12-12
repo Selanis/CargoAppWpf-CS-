@@ -103,7 +103,8 @@ namespace CargoAppWpf
                         new XElement("Work", "—"),
                         new XElement("Mail", "—"),
                         new XElement("Telephone", "—"),
-                        new XElement("Date", DateTime.Today.ToString().Substring(0, 10))
+                        new XElement("Date", DateTime.Today.ToString().Substring(0, 10)),
+                        new XElement("Age", age)
                     /// В поле дата настраиваю так, чтобы фиксировалась дата регистрации. Перевожу её в строку, а дальше методом Substring фиксирую срез
                     );
 

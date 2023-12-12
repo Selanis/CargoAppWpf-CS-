@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Xml.Linq;
 
 namespace CargoAppWpf
 {
@@ -19,9 +20,37 @@ namespace CargoAppWpf
     /// </summary>
     public partial class Profile : Window
     {
-        public Profile()
+
+        public IEnumerable<XElement> userLog; /// Обозначаю переменную, в которой буду хранить данные пользователя
+
+        public Profile(IEnumerable<XElement> userLogIn)
         {
             InitializeComponent();
+
+            userLog = userLogIn; /// Перекладываю локальную переменную в глобальную
+
+            /// Подключаю файлик
+            XElement users = XElement.Load("../../../xml-files/users.xml");
+
+            /// Вывожу в личном кабинете информацию из человека, который авторирзовался (userLogIn)
+            Name.Content = userLogIn.First().Element("Name").Value.ToUpper() + " " +
+                userLogIn.First().Element("FirstName").Value + "\n" +
+                userLogIn.First().Element("LastName").Value;
+            Id.Content = userLogIn.First().Element("Id").Value;
+            Login.Content = userLogIn.First().Element("Login").Value;
+            Gender.Content = userLogIn.First().Element("Gender").Value;
+            Date.Content = userLogIn.First().Element("Date").Value;
+            Mail.Content = userLogIn.First().Element("Mail").Value;
+            Telephone.Content = userLogIn.First().Element("Telephone").Value;
+            Work.Content = userLogIn.First().Element("Work").Value;
+            Age.Content = userLogIn.First().Element("Age").Value;
+        }
+
+        private void Button_Rename(object sender, RoutedEventArgs e)
+        {
+            /// Открываю окошкодля изменения данных
+            Profile_Rename rename = new Profile_Rename(userLog);
+            rename.Show();
         }
     }
 }

@@ -14,6 +14,7 @@ using System.Xml.Linq;
 using System.Xml;
 using System.Linq;
 using System.Collections;
+using System.Security.Cryptography.X509Certificates;
 
 namespace CargoAppWpf
 {
@@ -58,10 +59,13 @@ namespace CargoAppWpf
             {
                 if (wrong)
                 {
+                    /// public IEnumerable<XElement> userLog = userLogIn;
                     Window1 mainWin = new Window1(userLogIn);  /// Передаю в главное окно данные человека, который зашёл
                     mainWin.Show();
                     this.Close();
-                }
+
+                    
+    }
                 else
                 {
                     MessageBox.Show("Неправильный логин или пароль");

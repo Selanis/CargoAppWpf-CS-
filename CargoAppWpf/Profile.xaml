@@ -19,15 +19,18 @@
         <Label Content="Номер телефона:" HorizontalAlignment="Left" Margin="75,402,0,0" VerticalAlignment="Top" Foreground="#FF434E74" FontFamily="Inter Medium" FontSize="24"/>
         <Label Content="Дата регистрации:" HorizontalAlignment="Left" Margin="75,437,0,0" VerticalAlignment="Top" Foreground="#FF434E74" FontFamily="Inter Medium" FontSize="24"/>
 
-        <Label x:Name="Name" Content="—" HorizontalAlignment="Left" Margin="199,62,0,0" VerticalAlignment="Top" Foreground="#FF434E74" FontFamily="Inter ExtraBold" FontSize="24"/>
+        <Label x:Name="Name" Content="—" HorizontalAlignment="Left" Margin="199,62,0,0" VerticalAlignment="Top" Foreground="#FF434E74" FontFamily="Inter ExtraBold" FontSize="32"/>
 
         <Label x:Name="Age" Content="—" HorizontalAlignment="Left" Margin="189,174,0,0" VerticalAlignment="Top" Foreground="#FF434E74" FontFamily="Inter SemiBold" FontSize="24"/>
         <Label x:Name="Gender" Content="—" HorizontalAlignment="Left" Margin="138,212,0,0" VerticalAlignment="Top" Foreground="#FF434E74" FontFamily="Inter SemiBold" FontSize="24"/>
-        <Label x:Name="Id" Content="—" HorizontalAlignment="Left" Margin="113,0,0,0" VerticalAlignment="Center" Foreground="#FF434E74" FontFamily="Inter SemiBold" FontSize="24"/>
+        <Label x:Name="Id" Content="—" HorizontalAlignment="Left" Margin="113,250,0,0" VerticalAlignment="Top" Foreground="#FF434E74" FontFamily="Inter SemiBold" FontSize="24"/>
         <Label x:Name="Login" Content="—" HorizontalAlignment="Left" Margin="163,288,0,0" VerticalAlignment="Top" Foreground="#FF434E74" FontFamily="Inter SemiBold" FontSize="24"/>
         <Label x:Name="Work" Content="—" HorizontalAlignment="Left" Margin="228,326,0,0" VerticalAlignment="Top" Foreground="#FF434E74" FontFamily="Inter SemiBold" FontSize="24"/>
         <Label x:Name="Mail" Content="—" HorizontalAlignment="Left" Margin="163,364,0,0" VerticalAlignment="Top" Foreground="#FF434E74" FontFamily="Inter SemiBold" FontSize="24"/>
         <Label x:Name="Telephone" Content="—" HorizontalAlignment="Left" Margin="292,402,0,0" VerticalAlignment="Top" Foreground="#FF434E74" FontFamily="Inter SemiBold" FontSize="24"/>
         <Label x:Name="Date" Content="—" HorizontalAlignment="Left" Margin="309,437,0,0" VerticalAlignment="Top" Foreground="#FF434E74" FontFamily="Inter SemiBold" FontSize="24"/>
+        <Button HorizontalAlignment="Right" Margin="0,67, 150,0" VerticalAlignment="Top" Height="35" Width="35" BorderThickness="0"  Background="transparent" Panel.ZIndex="10" Click="Button_Rename">
+            <Image Height="30" Source="C:\Users\kpole\Desktop\RTU MIREA\3 семестр\Программная вёрстка в дизайне\Грузовые перевозки\CargoAppWpf\CargoAppWpf\images\rename-logo.png" Stretch="Fill" Width="30" Panel.ZIndex="10"/>
+        </Button>
     </Grid>
 </Window>

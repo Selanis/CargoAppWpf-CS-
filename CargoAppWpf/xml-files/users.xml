@@ -12,44 +12,34 @@
     <Mail>reshalaBaisan@gmail.com</Mail>
     <Telephone>8(800)555-35-35</Telephone>
     <Date>20.07.2023</Date>
+    <Age>45</Age>
   </User>
   <User>
     <Id>2</Id>
-    <Name>—</Name>
+    <Name>Полехова</Name>
     <FirstName>Екатерина</FirstName>
-    <LastName>—</LastName>
+    <LastName>Владимировна</LastName>
     <Gender>Женский</Gender>
     <Login>kate</Login>
     <Password>1</Password>
-    <Work>—</Work>
-    <Mail>—</Mail>
-    <Telephone>—</Telephone>
+    <Work>React Web-developer (Senior)</Work>
+    <Mail>e.polehova@gradient.ru</Mail>
+    <Telephone>89262826798</Telephone>
     <Date>06.12.2023</Date>
+    <Age>19</Age>
   </User>
   <User>
     <Id>3</Id>
     <Name>—</Name>
-    <FirstName>Владимир</FirstName>
+    <FirstName>Кристина</FirstName>
     <LastName>—</LastName>
-    <Gender>Мужской</Gender>
-    <Login>vova</Login>
+    <Gender>Другое</Gender>
+    <Login>kris.feduk</Login>
     <Password>123</Password>
     <Work>—</Work>
     <Mail>—</Mail>
     <Telephone>—</Telephone>
-    <Date>06.12.2023</Date>
-  </User>
-  <User>
-    <Id>4</Id>
-    <Name>—</Name>
-    <FirstName>Гендальф</FirstName>
-    <LastName>—</LastName>
-    <Gender>Другое</Gender>
-    <Login>gendalf</Login>
-    <Password>123465</Password>
-    <Work>—</Work>
-    <Mail>—</Mail>
-    <Telephone>—</Telephone>
-    <Date>06.12.2023</Date>
+    <Date>11.12.2023</Date>
+    <Age>19</Age>
   </User>
 </Users>

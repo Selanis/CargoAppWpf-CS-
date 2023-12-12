@@ -20,9 +20,13 @@ namespace CargoAppWpf
     /// </summary>
     public partial class Window1 : Window
     {
+
+        private IEnumerable<XElement> userLog; /// Обозначаю переменную, в которой буду хранить данные пользователя
         public Window1(IEnumerable<XElement> userLogIn) /// Получаю userLogIn с авторизации
         {
             InitializeComponent();
+
+            userLog = userLogIn; /// Перекладываю локальную переменную в глобальную
 
             /// userLogIn — это тип IEnumerable, т.е. неисчисляемый (по типу массива). Поэтому я методом First() беру первый элемент оттуда — элемент xml-файлика User, в котором ищу Имя зашедшего
             string nameUser = userLogIn.First().Element("FirstName").Value; /// Беру имя пользователя
@@ -30,8 +34,6 @@ namespace CargoAppWpf
 
             /// Подключаю файлик
             XElement users = XElement.Load("../../../xml-files/users.xml");
-
-            
         }
 
         /// Дополнительная фича, которая отвечает за то, чтобы напоминать пользователю заполнить информацию о себе полностью
@@ -41,6 +43,12 @@ namespace CargoAppWpf
             ImageLater.Opacity = 0;
             TextLater.Opacity = 0;
             ButtonLater.Opacity = 0;
+        }
+
+        private void Button_Profile(object sender, RoutedEventArgs e)
+        {
+            Profile profile = new Profile(userLog);
+            profile.Show();
         }
     }
 }
