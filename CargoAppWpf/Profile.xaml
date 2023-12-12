@@ -32,5 +32,9 @@
         <Button HorizontalAlignment="Right" Margin="0,67, 150,0" VerticalAlignment="Top" Height="35" Width="35" BorderThickness="0"  Background="transparent" Panel.ZIndex="10" Click="Button_Rename">
             <Image Height="30" Source="C:\Users\kpole\Desktop\RTU MIREA\3 семестр\Программная вёрстка в дизайне\Грузовые перевозки\CargoAppWpf\CargoAppWpf\images\rename-logo.png" Stretch="Fill" Width="30" Panel.ZIndex="10"/>
         </Button>
+
+        <Button HorizontalAlignment="Right" Margin="0,67,97,0" VerticalAlignment="Top" Height="35" Width="35" BorderThickness="0"  Background="transparent" Panel.ZIndex="10" Click="Button_Reload">
+            <Image Height="30" Source="C:\Users\kpole\Desktop\RTU MIREA\3 семестр\Программная вёрстка в дизайне\Грузовые перевозки\CargoAppWpf\CargoAppWpf\images\reload-logo.png" Stretch="Fill" Width="30" Panel.ZIndex="10"/>
+        </Button>
     </Grid>
 </Window>

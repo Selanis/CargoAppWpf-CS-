@@ -52,5 +52,29 @@ namespace CargoAppWpf
             Profile_Rename rename = new Profile_Rename(userLog);
             rename.Show();
         }
+
+        private void Button_Reload(object sender, RoutedEventArgs e)
+        {
+            /// Подключаю файлик ещё раз
+            XElement users = XElement.Load("../../../xml-files/users.xml");
+
+            /// Линк запросом ищу обновлённый элемент по id, который никогда не меняется
+            IEnumerable<XElement> userLogIn = from user in users.Elements("User")
+                                              where userLog.First().Element("Id").Value == user.Element("Id").Value
+                                              select user;
+
+            /// Обновляю текстовую информацию
+            Name.Content = userLogIn.First().Element("Name").Value.ToUpper() + " " +
+                userLogIn.First().Element("FirstName").Value + "\n" +
+                userLogIn.First().Element("LastName").Value;
+            Id.Content = userLogIn.First().Element("Id").Value;
+            Login.Content = userLogIn.First().Element("Login").Value;
+            Gender.Content = userLogIn.First().Element("Gender").Value;
+            Date.Content = userLogIn.First().Element("Date").Value;
+            Mail.Content = userLogIn.First().Element("Mail").Value;
+            Telephone.Content = userLogIn.First().Element("Telephone").Value;
+            Work.Content = userLogIn.First().Element("Work").Value;
+            Age.Content = userLogIn.First().Element("Age").Value;
+        }
     }
 }
