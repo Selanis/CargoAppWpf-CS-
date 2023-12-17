@@ -56,5 +56,17 @@ namespace CargoAppWpf
             Users_Window usersWindow = new Users_Window();
             usersWindow.Show();
         }
+
+        private void Button_Drivers(object sender, RoutedEventArgs e)
+        {
+            Drivers_Window driversWindow = new Drivers_Window();
+            driversWindow.Show();
+        }
+
+        private void Button_Ways(object sender, RoutedEventArgs e)
+        {
+            Ways_Window waysWindow = new Ways_Window();
+            waysWindow.Show();
+        }
     }
 }
