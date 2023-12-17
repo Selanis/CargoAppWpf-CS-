@@ -50,5 +50,11 @@ namespace CargoAppWpf
             Profile profile = new Profile(userLog);
             profile.Show();
         }
+
+        private void Button_Users(object sender, RoutedEventArgs e)
+        {
+            Users_Window usersWindow = new Users_Window();
+            usersWindow.Show();
+        }
     }
 }

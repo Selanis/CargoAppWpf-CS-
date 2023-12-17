@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CargoAppWpf"
         mc:Ignorable="d"
-        Title="Profile" Height="555" Width="959"
+        Title="Личный кабинет" Height="555" Width="959"
         ResizeMode="NoResize">
     <Grid>
         <Image HorizontalAlignment="Left" Source="C:\Users\kpole\Desktop\RTU MIREA\3 семестр\Программная вёрстка в дизайне\Грузовые перевозки\CargoAppWpf\CargoAppWpf\images\profile-img.png" Height="104" Margin="75,49,0,0" VerticalAlignment="Top" Width="104"/>

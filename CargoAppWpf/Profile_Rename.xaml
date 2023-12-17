@@ -5,8 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CargoAppWpf"
         mc:Ignorable="d"
-        Title="Profile_Rename" Height="820
-        " Width="588"
+        Title="Изменить данные" Height="820" Width="588"
         ResizeMode="NoResize">
     <Grid>
         <Label Content="Профиль" HorizontalAlignment="Center" Margin="0,70,0,0" VerticalAlignment="Top" FontSize="50" FontFamily="Inter" Foreground="#FF434E74" Height="71" Width="233"/>
