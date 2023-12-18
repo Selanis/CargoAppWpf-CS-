@@ -68,5 +68,11 @@ namespace CargoAppWpf
             Ways_Window waysWindow = new Ways_Window();
             waysWindow.Show();
         }
+
+        private void Button_Work(object sender, RoutedEventArgs e)
+        {
+            Work_Window workWindow = new Work_Window();
+            workWindow.Show();
+        }
     }
 }

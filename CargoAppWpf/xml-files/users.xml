@@ -17,7 +17,7 @@
   <User>
     <Id>2</Id>
     <Name>Полехова</Name>
-    <FirstName>Екатерина</FirstName>
+    <FirstName>Катерина</FirstName>
     <LastName>Владимировна</LastName>
     <Gender>Женский</Gender>
     <Login>kate</Login>
@@ -26,7 +26,7 @@
     <Mail>e.polehova@gradient.ru</Mail>
     <Telephone>89262826798</Telephone>
     <Date>06.12.2023</Date>
-    <Age>20</Age>
+    <Age>19</Age>
   </User>
   <User>
     <Id>3</Id>
