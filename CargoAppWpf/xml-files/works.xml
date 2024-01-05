@@ -34,8 +34,8 @@
       <DriverId>74595826</DriverId>
       <DriverId>12345678</DriverId>
     </Drivers>
-    <DateStart>07.12.2023</DateStart>
-    <DateBack>09.12.2023</DateBack>
+    <DateStart>15.12.2023</DateStart>
+    <DateBack>17.12.2023</DateBack>
     <Prize>22052.602</Prize>
   </Work>
   <Work>
@@ -46,5 +46,24 @@
     <DateStart>21.12.2023</DateStart>
     <DateBack>23.12.2023</DateBack>
     <Prize>15840.6</Prize>
+  </Work>
+  <Work>
+    <WayId>75315984</WayId>
+    <Drivers>
+      <DriverId>15975384</DriverId>
+    </Drivers>
+    <DateStart>20.12.2023</DateStart>
+    <DateBack>30.12.2023</DateBack>
+    <Prize>55000</Prize>
+  </Work>
+  <Work>
+    <WayId>57955842</WayId>
+    <Drivers>
+      <DriverId>67924536</DriverId>
+      <DriverId>12345678</DriverId>
+    </Drivers>
+    <DateStart>18.12.2023</DateStart>
+    <DateBack>18.12.2023</DateBack>
+    <Prize>13200</Prize>
   </Work>
 </Works>

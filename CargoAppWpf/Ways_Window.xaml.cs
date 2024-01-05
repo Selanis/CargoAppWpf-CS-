@@ -120,6 +120,18 @@ namespace CargoAppWpf
             Days.Text = "Дней в пути";
             Salary.Text = "Оплата, руб";
         }
+
+        private void DoubleClick(object sender, RoutedEventArgs e)
+        {
+            var rowId = DTUsers.SelectedItem;
+            System.Type type = rowId.GetType();
+
+            Id.Text = (string)type.GetProperty("Код_Маршрута").GetValue(rowId, null);
+            Name.Text = (string)type.GetProperty("Название").GetValue(rowId, null);
+            Distance.Text = (string)type.GetProperty("Дальность").GetValue(rowId, null);
+            Days.Text = (string)type.GetProperty("Дней_в_пути").GetValue(rowId, null);
+            Salary.Text = (string)type.GetProperty("Оплата").GetValue(rowId, null);
+        }
     }
 }
 

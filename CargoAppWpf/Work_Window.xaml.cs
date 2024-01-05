@@ -1,6 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Diagnostics;
 using System.Linq;
+using System.Reflection;
+using System.Runtime.Intrinsics.X86;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -12,13 +16,11 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Xml.Linq;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace CargoAppWpf
 {
-    /// <summary>
-    /// Логика взаимодействия для Work_Window.xaml
-    /// </summary>
-    public partial class Work_Window : Window
+public partial class Work_Window : Window
     {
 
         XElement works = XElement.Load("../../../xml-files/works.xml");
@@ -192,6 +194,7 @@ namespace CargoAppWpf
             else { MessageBox.Show("Не все ячейки заполнены!"); };
         }
 
+
         private void Button_Reload(object sender, RoutedEventArgs e)
         {
             var result = works.Descendants("Work").Select(x => new
@@ -207,6 +210,106 @@ namespace CargoAppWpf
 
             /// Заполняю табличку данными. Колонки будут названы названием переменной, так как в xaml я поставила AutoGenerateColumns="True"
             DTUsers.ItemsSource = result;
+        }
+
+        private void DoubleClick(object sender, RoutedEventArgs e)
+        {
+            var rowId = DTUsers.SelectedItem;
+            System.Type type = rowId.GetType();
+            var idPath = (string)type.GetProperty("Код_Маршрута").GetValue(rowId, null);
+            var idDriver = (string)type.GetProperty("Код_Водителя").GetValue(rowId, null);
+            var date = (string)type.GetProperty("Дата_Отправки").GetValue(rowId, null);
+
+            var index = 0;
+            foreach (var i in ways.Elements("Way"))
+            {
+                if (i.Element("Id").Value == idPath)
+                {
+                    break;
+                }
+                index++;
+            }
+            WayId.SelectedIndex = index;
+            DateStart.Text = date;
+
+            if (idDriver.Length > 8)
+            {
+                var idDriver1 = idDriver.Substring(0, 8);
+                var idDriver2 = idDriver.Substring(9, 8);
+
+                ButtonNew.Visibility = Visibility.Collapsed;
+                ButtonCancel.Visibility = Visibility.Visible;
+                DriverId2.Visibility = Visibility.Visible;
+
+                newDriver = true;
+
+                var index1 = 0;
+                var index2 = 0;
+                foreach (var i in drivers.Elements("Driver"))
+                {
+                    if (i.Element("Id").Value == idDriver1)
+                    {
+                        break;
+                    }
+                    index1++;
+                }
+                foreach (var i in drivers.Elements("Driver"))
+                {
+                    if (i.Element("Id").Value == idDriver2)
+                    {
+                        break;
+                    }
+                    index2++;
+                }
+                DriverId.SelectedIndex = index1;
+                DriverId2.SelectedIndex = index2;
+            } else
+            {
+                ButtonNew.Visibility = Visibility.Visible;
+                ButtonCancel.Visibility = Visibility.Collapsed;
+                DriverId2.Visibility = Visibility.Collapsed;
+
+                newDriver = false;
+                index = 0;
+                foreach (var i in drivers.Elements("Driver"))
+                {
+                    if (i.Element("Id").Value == idDriver)
+                    {
+                        break;
+                    }
+                    index++;
+                }
+                DriverId.SelectedIndex = index;
+            }
+        }
+
+        private void Button_Rename(object sender, RoutedEventArgs e)
+        {
+            IEnumerable<XElement> wrk;
+            if (!newDriver)
+            {
+                wrk = from work in works.Elements("Work")
+                    where work.Element("WayId").Value == WayId.Text.Substring(0, 8) && work.Element("Drivers").Elements("DriverId").First().Value == DriverId.Text.Substring(0, 8)
+                      select work;
+            } else
+            {
+                wrk = from work in works.Elements("Work")
+                    where work.Element("WayId").Value == WayId.Text.Substring(0, 8) && work.Element("Drivers").Elements("DriverId").First().Value == DriverId.Text.Substring(0, 8) && work.Element("Drivers").Elements("DriverId").Last().Value == DriverId2.Text.Substring(0, 8)
+                      select work;
+            }
+
+            var time = from t in ways.Elements("Way")
+                       where WayId.SelectedItem.ToString().Substring(0, 8) == t.Element("Id").Value
+                       select (float)t.Element("Days");
+            TimeSpan dayTimeRoad = new TimeSpan((int)time.First(), 0, 0, 1);
+            DateTime? dt = DateStart.SelectedDate;
+
+            wrk.First().Element("DateStart").Value = DateStart.Text;
+            wrk.First().Element("DateBack").Value = (dt + dayTimeRoad).ToString().Substring(0, 10);
+
+            works.Save("../../../xml-files/works.xml");
+
+            MessageBox.Show("Успешно!");
         }
     }
 }

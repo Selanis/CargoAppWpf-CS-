@@ -42,4 +42,18 @@
     <Date>11.12.2023</Date>
     <Age>19</Age>
   </User>
+  <User>
+    <Id>4</Id>
+    <Name>—</Name>
+    <FirstName>Иван</FirstName>
+    <LastName>—</LastName>
+    <Gender>Мужской</Gender>
+    <Login>ivan</Login>
+    <Password>123</Password>
+    <Work>Преподаватель</Work>
+    <Mail>—</Mail>
+    <Telephone>—</Telephone>
+    <Date>19.12.2023</Date>
+    <Age>26</Age>
+  </User>
 </Users>

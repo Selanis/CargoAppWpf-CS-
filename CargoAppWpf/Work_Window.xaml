@@ -10,12 +10,12 @@
     <Grid>
         <StackPanel>
             <ScrollViewer Margin="50,113,0,0" Width="728" HorizontalAlignment="Left">
-                <DataGrid x:Name="DTUsers" AutoGenerateColumns="True" Width="728" Height="650" Background="White" BorderBrush="#FFAE8FB1" BorderThickness="2" Foreground="#FF434E74"/>
+                <DataGrid MouseDoubleClick="DoubleClick" x:Name="DTUsers" AutoGenerateColumns="True" Width="728" Height="650" Background="White" BorderBrush="#FFAE8FB1" BorderThickness="2" Foreground="#FF434E74"/>
             </ScrollViewer>
         </StackPanel>
 
         <StackPanel Margin="790,118,50,54">
-            <Label Content="Работа" HorizontalAlignment="Center" Margin="0,0,0,0" FontSize="50" FontFamily="Inter" Foreground="#FF434E74" Grid.Column="1" Height="71" Width="182"/>
+            <Label x:Name="Ok" Content="Работа" HorizontalAlignment="Center" Margin="0,0,0,0" FontSize="50" FontFamily="Inter" Foreground="#FF434E74" Grid.Column="1" Height="71" Width="182"/>
 
             <Label Content="Код маршрута" Foreground="#FF434E74" FontFamily="Inter SemiBold" FontSize="20"/>
             <ComboBox x:Name="WayId" Width="416" Height="60" BorderBrush="#FF434E74" Background="White" Foreground="#FF434E74" VerticalAlignment="Center" FontFamily="Inter" FontSize="16"/>
@@ -33,7 +33,8 @@
             <DatePicker x:Name="DateStart" Foreground="#FF434E74" FontFamily="Inter" FontSize="16"/>
 
 
-            <Button Content="Добавить" HorizontalAlignment="Center" Margin="0,30,0,0" VerticalAlignment="Top" BorderThickness="2" Height="49" Width="168" Grid.Column="1" RenderTransformOrigin="0.5,0.5" FontFamily="Inter Medium" FontSize="20" BorderBrush="#FF434E74" Background="White" Foreground="#FF434E74" Click="Button_Add"/>
+            <Button Content="Добавить" HorizontalAlignment="Left" Margin="30,30,0,0" VerticalAlignment="Top" BorderThickness="2" Height="49" Width="168" Grid.Column="1" RenderTransformOrigin="0.5,0.5" FontFamily="Inter Medium" FontSize="20" BorderBrush="#FF434E74" Background="White" Foreground="#FF434E74" Click="Button_Add"/>
+            <Button Content="Изменить" HorizontalAlignment="Right" Margin="0,-48,30,0" VerticalAlignment="Top" BorderThickness="2" Height="49" Width="168" Grid.Column="1" RenderTransformOrigin="0.5,0.5" FontFamily="Inter Medium" FontSize="20" BorderBrush="#FF434E74" Background="White" Foreground="#FF434E74" Click="Button_Rename"/>
 
 
 

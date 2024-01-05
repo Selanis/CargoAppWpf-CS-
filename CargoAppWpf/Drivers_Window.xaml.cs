@@ -119,5 +119,17 @@ namespace CargoAppWpf
             LastName.Text = "Отчество";
             TimeWork.Text = "Стаж";
         }
+
+        private void DoubleClick(object sender, RoutedEventArgs e)
+        {
+            var rowId = DTUsers.SelectedItem;
+            System.Type type = rowId.GetType();
+
+            Id.Text = (string)type.GetProperty("Код_Водителя").GetValue(rowId, null);
+            Name.Text = (string)type.GetProperty("Фамилия").GetValue(rowId, null);
+            FirstName.Text = (string)type.GetProperty("Имя").GetValue(rowId, null);
+            LastName.Text = (string)type.GetProperty("Отчество").GetValue(rowId, null);
+            TimeWork.Text = (string)type.GetProperty("Стаж").GetValue(rowId, null);
+        }
     }
 }
